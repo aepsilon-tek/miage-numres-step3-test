@@ -3,4 +3,4 @@ FROM ${GITPOD_IMAGE}
 
 
 # Install nvm with node and npm
-RUN apt install nodejs
+RUN sudo apt install nodejs
