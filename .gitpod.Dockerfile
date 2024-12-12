@@ -1,20 +1,11 @@
 ARG GITPOD_IMAGE=gitpod/workspace-base:latest
 FROM ${GITPOD_IMAGE}
 
-
 USER gitpod
 
 
 RUN sudo apt-get -q update && \
     sudo apt install -yq openjdk-21-jdk
-
-
-# install nvm
-# RUN bash -c 'wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v$NVM_VERSION/install.sh | bash \
-#    && source $HOME/.nvm/nvm.sh && nvm install $NODE_VERSION \
-#    && nvm use $NODE_VERSION && nvm alias default $NODE_VERSION
-#RUN echo "nvm use default &>/dev/null" >> ~/.bashrc.d/51-nvm-fix
-
 
 ENV NODE_VERSION=22
 ENV TRIGGER_REBUILD=1

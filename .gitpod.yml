@@ -7,7 +7,7 @@ image:
   file: .gitpod.Dockerfile
   
 tasks:
-  - init: ./mvnw install -DskipTests=false
+  - init: ./mvnw install -DskipTests=true
 
 vscode:
   extensions:
