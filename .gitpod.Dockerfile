@@ -1,6 +1,8 @@
-ARG GITPOD_IMAGE=gitpod/workspace-java-21:latest
+ARG GITPOD_IMAGE=gitpod/workspace-base:latest
 FROM ${GITPOD_IMAGE}
 
 
-# Install nvm with node and npm
-RUN sudo apt install nodejs
+USER gitpod
+
+RUN sudo apt-get -q update && \
+    sudo apt install -yq openjdk-21-jdk
