@@ -7,8 +7,4 @@ ENV NVM_DIR  ~/.nvm
 ENV NODE_VERSION 22
 
 # Install nvm with node and npm
-RUN mkdir -p $NVM_DIR && curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash \
-    && . $NVM_DIR/nvm.sh \
-    && nvm install $NODE_VERSION \
-    && nvm alias default $NODE_VERSION \
-    && nvm use default
+RUN brew install node@22
